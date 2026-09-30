@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #FBFBFA;
+  --surface: #FFFFFF;
+  --subtle: #F4F4F1;
+  --border: #E8E8E3;
+  --border-active: #D4D4CD;
+  --ink: #18181B;
+  --muted: #71717A;
+  --brand: #1E293B;
+  --teal: #0D9488;
+  --amber: #D97706;
+  --red: #DC2626;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-subtle: var(--subtle);
+  --color-line: var(--border);
+  --color-line-active: var(--border-active);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-teal: var(--teal);
+  --color-amber: var(--amber);
+  --color-danger: var(--red);
+  --font-sans: var(--font-geist-sans), "Inter", -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-pop: 0 12px 40px -12px rgba(24, 24, 27, 0.18);
+}
+
+/* Canvas color lives on html; body is transparent so the fixed z-index:-10
+   ambient canvas (AmbientBackground) paints above html but below all content. */
+html { color-scheme: light; background: var(--canvas); }
+
+body {
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* full-height shells must not hide the ambient canvas (html carries the canvas color) */
+body .h-dvh.bg-canvas, body .min-h-dvh.bg-canvas, body .min-h-screen.bg-canvas { background-color: transparent; }
+
+::selection { background: #E4E4E7; }
+
+/* subtle grid used on hero + auth screens */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(24, 24, 27, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%);
+}
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+.skeleton { position: relative; overflow: hidden; background: var(--subtle); border-radius: 8px; }
+.skeleton::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes dialog-in { from { opacity: 0; scale: .97; } to { opacity: 1; scale: 1; } }
+@keyframes drawer-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.animate-rise { animation: rise .45s cubic-bezier(.2,.7,.2,1) both; }
+
+@keyframes dash { to { stroke-dashoffset: -24; } }
+.flow-line { stroke-dasharray: 4 8; animation: dash 1s linear infinite; }
+
+.scroll-thin::-webkit-scrollbar { height: 8px; width: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: var(--border-active); border-radius: 8px; }
+
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }

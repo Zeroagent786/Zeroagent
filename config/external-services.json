@@ -1,0 +1,17 @@
+{
+  "faucets": {
+    "baseSepolia_ETH": "https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet",
+    "baseSepolia_USDC": "https://faucet.circle.com/"
+  },
+  "explorers": {
+    "baseSepolia": "https://sepolia.basescan.org"
+  },
+  "rpcs": {
+    "baseSepolia": "https://sepolia.base.org"
+  },
+  "services": {
+    "walletConnect": "https://cloud.walletconnect.com",
+    "pinata": "https://pinata.cloud",
+    "baseScanApiKey": "https://basescan.org/myapikey"
+  }
+}

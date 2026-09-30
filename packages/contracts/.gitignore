@@ -1,0 +1,9 @@
+# Env files with private keys
+.env
+.env.local
+.env.*
+
+# Foundry build artifacts
+out/
+cache/
+broadcast/

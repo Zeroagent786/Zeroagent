@@ -1,0 +1,15 @@
+{
+  "network": "ethereum-sepolia",
+  "chainId": 11155111,
+  "rpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",
+  "blockExplorer": "https://sepolia.etherscan.io",
+  "deployBlock": 11813590,
+  "contracts": {
+    "usdc": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+    "agentIdentityRegistry": "0x4479E9A39d0Afa14Cb369DB895762C4C1C09410A",
+    "agentPolicyGuardModule": "0x74518502325Aac333e47E5075828EC114C385a0b",
+    "taskEscrow": "0xa6DefDFA9F974Bd0f3c14FB0A24f308Fa771e38e",
+    "demoUsdc": "0x615E800a31c3cC30727569A498949E5F041B8Df4"
+  },
+  "demoUsdcDeployBlock": 11814903
+}
