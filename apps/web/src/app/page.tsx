@@ -254,9 +254,21 @@ await registry.commitMemoryRoot(agentId, root, uri);`}</code></pre>
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-muted md:flex-row md:px-8">
           <Logo size={24} />
           <p>© {new Date().getFullYear()} ZeroAgent</p>
-          <a href={X_URL} target="_blank" rel="noopener noreferrer" aria-label="ZeroAgent on X" className="inline-flex items-center gap-2 hover:text-ink transition-colors">
-            <XIcon className="h-4 w-4" /> Follow {X_HANDLE}
-          </a>
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={() => {
+                navigator.clipboard.writeText("0x84130a43279653343b41f0b9bba3998eefcef819");
+                // Optional visual feedback can be added here
+              }}
+              title="0x84130a43279653343b41f0b9bba3998eefcef819" 
+              className="inline-flex font-mono text-xs hover:text-ink transition-colors"
+            >
+              CA: 0x8413...f819
+            </button>
+            <a href={X_URL} target="_blank" rel="noopener noreferrer" aria-label="ZeroAgent on X" className="inline-flex items-center gap-2 hover:text-ink transition-colors">
+              <XIcon className="h-4 w-4" /> Follow {X_HANDLE}
+            </a>
+          </div>
         </div>
       </footer>
     </div>
