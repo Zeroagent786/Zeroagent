@@ -58,3 +58,4 @@ coverage/
 tests/e2e/keys.json
 tests/e2e/shots/
 tests/e2e/manual-accounts.json
+demo/

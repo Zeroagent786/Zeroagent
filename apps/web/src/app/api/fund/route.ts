@@ -7,8 +7,8 @@ import { SEPOLIA_RPC, USDC_ADDRESS } from "../../../lib/contracts";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const GAS_DROP = parseEther("0.01");
-const GAS_LOW = parseEther("0.004");
+const GAS_DROP = parseEther("0.006"); // ~a full session of actions at Sepolia gas prices
+const GAS_LOW = parseEther("0.0025");
 const TOKEN_DROP = 10_000n * 10n ** 6n;
 const TOKEN_LOW = 100n * 10n ** 6n;
 const FAUCET_RESERVE = parseEther("0.005");

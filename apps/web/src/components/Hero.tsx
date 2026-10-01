@@ -1,5 +1,6 @@
 "use client";
 
+import { ContractChip } from "./ContractChip";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
@@ -132,6 +133,16 @@ export function Hero() {
             >
               View MCP Spec
             </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: EASE }}
+            className="mt-6"
+          >
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/50">Contract address</p>
+            <ContractChip fullFrom="sm" variant="dark" />
           </motion.div>
         </div>
 

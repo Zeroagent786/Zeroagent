@@ -9,6 +9,7 @@ import { useAccount } from "../../hooks/useZeroAccount";
 import { formatEther } from "viem";
 import { Logo } from "../../components/Logo";
 import { XIcon } from "../../components/XIcon";
+import { ContractChip } from "../../components/ContractChip";
 import { X_HANDLE, X_URL } from "../../lib/links";
 import { cx } from "../../components/ui";
 import { CHAIN_ID } from "../../lib/contracts";
@@ -96,8 +97,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <Link href="/" className="md:hidden" aria-label="ZeroAgent, back to start" onClick={requestIntro}>
             <Logo size={28} label={false} />
           </Link>
-          <div className="hidden md:block text-sm text-muted">
-            {NAV.find((n) => isActive(n.href))?.name}
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="hidden text-sm text-muted md:block">{NAV.find((n) => isActive(n.href))?.name}</div>
+            <ContractChip fullFrom="xl" />
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <NetworkSelect />
