@@ -5,13 +5,10 @@ import { motion, type Variants } from "framer-motion";
 import {
   ArrowRight, BadgeCheck, Blocks, Check, Cpu, Database, KeyRound, Network, X,
 } from "lucide-react";
-import { Logo } from "../components/Logo";
-import { XIcon } from "../components/XIcon";
-import { X_HANDLE, X_URL } from "../lib/links";
 import { LifecycleDemo } from "../components/LifecycleDemo";
 import { Hero } from "../components/Hero";
 import { Splash } from "../components/Splash";
-import { ContractChip } from "../components/ContractChip";
+import { SiteNav, SiteFooter } from "../components/SiteNav";
 import { NETWORK_LABEL } from "../lib/network";
 import { ESCROW_ADDRESS, EXPLORER, POLICY_GUARD_ADDRESS, REGISTRY_ADDRESS } from "../lib/contracts";
 
@@ -93,31 +90,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen overflow-x-clip bg-canvas text-ink flex flex-col">
       <Splash />
-      {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-line bg-surface/80 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-3 px-4 md:px-8">
-          <Link href="/" aria-label="ZeroAgent, back to start" className="shrink-0" onClick={(e) => { if (window.scrollY > 4) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
-            <span className="sm:hidden"><Logo label={false} /></span>
-            <span className="hidden sm:inline"><Logo /></span>
-          </Link>
-          <nav className="hidden xl:flex items-center gap-6 whitespace-nowrap text-sm font-medium text-muted">
-            <a href="#how" className="hover:text-ink transition-colors">How it works</a>
-            <a href="#features" className="hover:text-ink transition-colors">Features</a>
-            <a href="#registry" className="hover:text-ink transition-colors">Registry</a>
-            <a href="#security" className="hover:text-ink transition-colors">Security</a>
-            <a href="#developers" className="hover:text-ink transition-colors">Docs</a>
-          </nav>
-          <div className="flex min-w-0 items-center gap-2 sm:gap-3">
-            <ContractChip />
-            <a href={X_URL} target="_blank" rel="noopener noreferrer" aria-label="ZeroAgent on X" className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line text-muted transition-colors hover:bg-subtle hover:text-ink sm:inline-flex">
-              <XIcon className="h-4 w-4" />
-            </a>
-            <Link href="/app" className="inline-flex h-10 shrink-0 items-center gap-2 whitespace-nowrap rounded-lg bg-ink px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#27272A]">
-              Launch App <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteNav />
 
       <main className="flex-1">
         {/* Hero */}
@@ -255,15 +228,7 @@ await registry.commitMemoryRoot(agentId, root, uri);`}</code></pre>
         </section>
       </main>
 
-      <footer className="border-t border-line bg-surface">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-muted md:flex-row md:px-8">
-          <Logo size={24} />
-          <p>© {new Date().getFullYear()} ZeroAgent</p>
-          <a href={X_URL} target="_blank" rel="noopener noreferrer" aria-label="ZeroAgent on X" className="inline-flex items-center gap-2 hover:text-ink transition-colors">
-            <XIcon className="h-4 w-4" /> Follow {X_HANDLE}
-          </a>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
