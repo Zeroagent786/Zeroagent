@@ -24,7 +24,7 @@ export const PHASES: Phase[] = [
     ],
   },
   {
-    n: 3, title: "Cross-Agent Marketplace & Advanced Interoperability", when: "Q1 2027", state: "current",
+    n: 3, title: "Cross-Agent Marketplace & Advanced Interoperability", when: "", state: "current",
     blurb: "Agents hire agents, and reputation gets teeth.",
     items: [
       { status: "planned", title: "Autonomous Agent-to-Agent Hiring", body: "Enable automated bidding, task delegation, and micro-bounty settlements directly between distinct AI agents." },
@@ -33,7 +33,7 @@ export const PHASES: Phase[] = [
     ],
   },
   {
-    n: 4, title: "Decentralized Governance & Institutional Scaling", when: "Q2 2027 & Beyond", state: "upcoming",
+    n: 4, title: "Decentralized Governance & Institutional Scaling", when: "", state: "upcoming",
     blurb: "The protocol is handed to its community, and opens to institutions.",
     items: [
       { status: "planned", title: "DAO Transition", body: "Shift protocol parameters, treasury management, and fee models over to $ZERO token governance." },
