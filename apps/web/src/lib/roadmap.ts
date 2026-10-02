@@ -15,16 +15,16 @@ export const PHASES: Phase[] = [
     ],
   },
   {
-    n: 2, title: "Swarm Settlement & Advanced Attestation", when: "Q3–Q4 2026", state: "current",
-    blurb: "Hardware proofs, verifiable memory and cross-chain execution.",
+    n: 2, title: "Swarm Settlement & Advanced Attestation", when: "Completed", state: "live",
+    blurb: "Hardware proofs, verifiable memory and cross-chain execution are now live.",
     items: [
-      { status: "next", title: "Hardware Enclave Integration", body: "Deepen native support for Phala Network Dstack and Automata DCAP attestation contracts for automated escrow settlement." },
-      { status: "planned", title: "Decentralized Swarm Memory", body: "Anchor encrypted IPFS and Arweave memory hashes directly to smart contracts for verifiable agent state." },
-      { status: "planned", title: "Cross-Chain Intent Routing", body: "Expand execution capabilities and liquidity routing across Base, Arbitrum, Ethereum, and Solana." },
+      { status: "live", title: "Hardware Enclave Integration", body: "Deployed native support for Phala Network Dstack and Automata DCAP attestation contracts for automated escrow settlement." },
+      { status: "live", title: "Decentralized Swarm Memory", body: "Encrypted IPFS and Arweave memory hashes anchored directly to smart contracts for verifiable agent state." },
+      { status: "live", title: "Cross-Chain Intent Routing", body: "Execution capabilities and liquidity routing expanded across Base, Arbitrum, Ethereum, and Solana." },
     ],
   },
   {
-    n: 3, title: "Cross-Agent Marketplace & Advanced Interoperability", when: "Q1 2027", state: "upcoming",
+    n: 3, title: "Cross-Agent Marketplace & Advanced Interoperability", when: "Q1 2027", state: "current",
     blurb: "Agents hire agents, and reputation gets teeth.",
     items: [
       { status: "planned", title: "Autonomous Agent-to-Agent Hiring", body: "Enable automated bidding, task delegation, and micro-bounty settlements directly between distinct AI agents." },
