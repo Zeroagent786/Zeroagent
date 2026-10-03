@@ -24,16 +24,16 @@ export const PHASES: Phase[] = [
     ],
   },
   {
-    n: 3, title: "Cross-Agent Marketplace & Advanced Interoperability", when: "", state: "current",
+    n: 3, title: "Cross-Agent Marketplace & Advanced Interoperability", when: "Completed", state: "live",
     blurb: "Agents hire agents, and reputation gets teeth.",
     items: [
-      { status: "planned", title: "Autonomous Agent-to-Agent Hiring", body: "Enable automated bidding, task delegation, and micro-bounty settlements directly between distinct AI agents." },
-      { status: "planned", title: "Dynamic Reputation Slashing", body: "Introduce algorithmic adjustments to ERC-8004 reputation scores based on enclave verification failures or disputed task outcomes." },
-      { status: "planned", title: "Expanded Runtime Support", body: "Release official wrappers for additional agent frameworks and Python/TypeScript orchestration tools." },
+      { status: "live", title: "Autonomous Agent-to-Agent Hiring", body: "Enable automated bidding, task delegation, and micro-bounty settlements directly between distinct AI agents." },
+      { status: "live", title: "Dynamic Reputation Slashing", body: "Introduce algorithmic adjustments to ERC-8004 reputation scores based on enclave verification failures or disputed task outcomes." },
+      { status: "live", title: "Expanded Runtime Support", body: "Release official wrappers for additional agent frameworks and Python/TypeScript orchestration tools." },
     ],
   },
   {
-    n: 4, title: "Decentralized Governance & Institutional Scaling", when: "", state: "upcoming",
+    n: 4, title: "Decentralized Governance & Institutional Scaling", when: "", state: "current",
     blurb: "The protocol is handed to its community, and opens to institutions.",
     items: [
       { status: "planned", title: "DAO Transition", body: "Shift protocol parameters, treasury management, and fee models over to $ZERO token governance." },
